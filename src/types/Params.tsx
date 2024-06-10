@@ -9,5 +9,6 @@ export type Params = {
 	injectMessage: (content: string | JSX.Element, sender?: string) => Promise<void>;
 	streamMessage: (content: string | JSX.Element, sender?: string) => Promise<void>;
 	openChat: (isOpen: boolean) => void;
+	openDrawer: (isOpenDrawer: boolean) => void;
 	files?: FileList;
 }

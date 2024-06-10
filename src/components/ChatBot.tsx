@@ -79,7 +79,7 @@ const ChatBot = ({
 	 * Renders chatbot with providers based on given options.
 	 */
 	const renderChatBot = () => {
-		let result = <ChatBotContainer flow={parsedFlow}/>;
+		let result = <ChatBotContainer flow={parsedFlow} />;
 		if (!botOptions.advance?.useCustomMessages) {
 			result = wrapMessagesProvider(result);
 		}

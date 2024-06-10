@@ -18,7 +18,7 @@ import notificationSound from "../assets/notification_sound.wav";
 const defaultOptions = {
 	// tracks state of chat window, also the default state to load it in
 	isOpen: false,
-
+	isOpenDrawer:false,
 	// configurations
 	theme: {
 		primaryColor: "#42b0c5",

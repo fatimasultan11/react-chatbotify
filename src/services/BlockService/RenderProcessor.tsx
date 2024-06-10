@@ -10,6 +10,7 @@ import { Params } from "../../types/Params";
 export const processRender = async (block: Block, params: Params) => {
 
 	const element = block.render;
+	
 	if (!element) {
 		return;
 	}

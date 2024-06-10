@@ -21,6 +21,7 @@ import { Message } from "../types/Message";
 import { Params } from "../types/Params";
 
 import "./ChatBotContainer.css";
+import ChatBotDrawer from "./ChatBotDrawer/ChatBotDrawer";
 
 /**
  * Integrates and contains the various components that makeup the chatbot.
@@ -101,7 +102,7 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 		|| window.innerWidth);	
 
 	// tracks previous window scroll position to go back to on mobile
-	const scrollPositionRef = useRef<number>(0);
+	const scrollPositionRef = useRef<number>(0);	
 
 	// adds listeners and render chat history button if enabled
 	useEffect(() => {
@@ -129,6 +130,7 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 				}
 			}
 		}
+		
 
 		return () => {
 			window.removeEventListener("click", handleFirstInteraction);
@@ -333,6 +335,9 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 	 */
 	const openChat = (isOpen: boolean) => {
 		setBotOptions({...botOptions, isOpen});
+	}
+	const openDrawer = (isOpenDrawer: boolean) => {
+		setBotOptions({...botOptions, isOpenDrawer});
 	}
 
 	/**
@@ -574,7 +579,6 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 		}
 		setVoiceToggledOn(prev => !prev);
 	}
-
 	/**
 	 * Handles action input from the user which includes text, files and emoji.
 	 * 
@@ -619,7 +623,7 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 		}, 400);
 
 		setTimeout(async () => {
-			const params = {prevPath: getPrevPath(), userInput, injectMessage, streamMessage, openChat};
+			const params = {prevPath: getPrevPath(), userInput, injectMessage, streamMessage, openChat,openDrawer};
 			const hasNextPath = await postProcessBlock(flow, path, params, setPaths);
 			if (!hasNextPath) {
 				updateTextArea();
@@ -704,7 +708,12 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 			className={getWindowStateClass()}
 		>
 			<ChatBotTooltip/>
-			<ChatBotButton unreadCount={unreadCount}/>
+			<ChatBotButton unreadCount={unreadCount} />
+			{botOptions.isOpen ?
+				<ChatBotDrawer isOpenDrawer={botOptions.isOpenDrawer}
+					getCurrPath={getCurrPath} flow={flow}/>
+				:null			
+			}
 			{/* styles and prevents background from scrolling on mobile when chat window is open */}
 			{botOptions.isOpen && !isDesktop && !botOptions.theme?.embedded &&
 				<>

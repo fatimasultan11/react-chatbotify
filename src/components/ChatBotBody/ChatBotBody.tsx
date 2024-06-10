@@ -43,6 +43,7 @@ const ChatBotBody = ({
 	setIsScrolling: Dispatch<SetStateAction<boolean>>;
 	unreadCount: number;
 	setUnreadCount: Dispatch<SetStateAction<number>>;
+	handleOpenDrawer:()=>void
 }) => {
 
 	// handles options for bot

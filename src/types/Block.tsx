@@ -12,6 +12,8 @@ export type Block = {
 	checkboxes?: {items: Array<string>, max?: number, min?: number};
 	render?: JSX.Element | void | ((params: Params) => JSX.Element | void) |
 	((params: Params) => Promise<JSX.Element | void>);
+	renderDrawerItems?: JSX.Element | void | ((params: Params) => JSX.Element | void) |
+	((params: Params) => Promise<JSX.Element | void>);
 	chatDisabled?: boolean;
 	isSensitive?: boolean;
 	transition?: {duration: number, interruptable?: boolean} | void | 

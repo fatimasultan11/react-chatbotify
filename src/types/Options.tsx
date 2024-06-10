@@ -4,6 +4,7 @@
 export type Options = {
 	// tracks state of chat window, also the default state to load it in
 	isOpen?: boolean;
+	isOpenDrawer?: boolean;
 
 	// configurations
 	theme?: {
