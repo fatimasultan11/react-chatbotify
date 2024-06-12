@@ -253,7 +253,7 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 		}
 
 		const params = {prevPath: getPrevPath(), userInput: paramsInputRef.current,
-			injectMessage, streamMessage, openChat};
+			injectMessage, streamMessage, openChat,openDrawer};
 		callNewBlock(currPath, block, params);
 	}, [paths]);
 
@@ -710,7 +710,7 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 			<ChatBotTooltip/>
 			<ChatBotButton unreadCount={unreadCount} />
 			{botOptions.isOpen ?
-				<ChatBotDrawer isOpenDrawer={botOptions.isOpenDrawer}
+				<ChatBotDrawer isOpenDrawer={botOptions.isOpenDrawer == undefined?false:botOptions.isOpenDrawer}
 					getCurrPath={getCurrPath} flow={flow}/>
 				:null			
 			}
@@ -767,7 +767,7 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 					<ChatBotFooter inputRef={inputRef} flow={flow} textAreaDisabled={textAreaDisabled} 
 						handleActionInput={handleActionInput} injectMessage={injectMessage}
 						streamMessage={streamMessage} getCurrPath={getCurrPath} getPrevPath={getPrevPath}
-						openChat={openChat}
+						openChat={openChat} openDrawer={openDrawer}
 					/>
 				}
 			</div>

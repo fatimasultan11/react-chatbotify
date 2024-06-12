@@ -30,7 +30,8 @@ const ChatBotFooter = ({
 	openChat,
 	getCurrPath,
 	getPrevPath,
-	handleActionInput
+	handleActionInput,
+	openDrawer
 }: {
 	inputRef: RefObject<HTMLTextAreaElement | HTMLInputElement>;
 	flow: Flow;
@@ -38,6 +39,7 @@ const ChatBotFooter = ({
 	injectMessage: (content: string | JSX.Element, sender?: string) => Promise<void>;
 	streamMessage: (content: string | JSX.Element, sender?: string) => Promise<void>;
 	openChat: (isOpen: boolean) => void;
+	openDrawer: (isOpenDrawer: boolean) => void;
 	getCurrPath: () => keyof Flow | null;
 	getPrevPath: () => keyof Flow | null;
 	handleActionInput: (path: keyof Flow, userInput: string, sendUserInput?: boolean) => Promise<void>;
@@ -52,7 +54,7 @@ const ChatBotFooter = ({
 				{!botOptions.fileAttachment?.disabled &&
 					<FileAttachmentButton inputRef={inputRef} flow={flow} getCurrPath={getCurrPath} openChat={openChat}
 						getPrevPath={getPrevPath} handleActionInput={handleActionInput} injectMessage={injectMessage}
-						streamMessage={streamMessage}
+						streamMessage={streamMessage} openDrawer={openDrawer}
 					/>
 				}
 				{!botOptions.emoji?.disabled &&

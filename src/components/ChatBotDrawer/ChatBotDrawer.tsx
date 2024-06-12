@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { ReactNode} from 'react';
 import "./ChatBotDrawer.css";
 import { useBotOptions } from '../../context/BotOptionsContext';
 import { Flow } from '../../types/Flow';
+
 
 const ChatBotDrawer = ({
 	isOpenDrawer,
@@ -9,15 +10,22 @@ const ChatBotDrawer = ({
 	flow
 }:
 {
-	toggleDrawer: () => void, isOpenDrawer:
-	boolean,
-	getCurrPath: () => keyof Flow | null;
+	isOpenDrawer:boolean,
+	getCurrPath: () => keyof Flow | null ;
 	flow: Flow;
 	}) => {
 	const { botOptions } = useBotOptions();
 
 	const currPath = getCurrPath();
+	if (!currPath) {
+		return;
+	}
 	const block = flow[currPath];
+
+	// if path is invalid, nothing to process (i.e. becomes dead end!)
+	if (!block) {
+		return;
+	}
 	
 	const headerStyle: React.CSSProperties = {
 		background: `linear-gradient(to right, ${botOptions.theme?.secondaryColor },
@@ -30,8 +38,8 @@ const ChatBotDrawer = ({
 				<div  style={headerStyle} className="rcb-chat-header-container">					
 				</div>
 				<div>
-					{block.renderDrawerItems ? 
-						block.renderDrawerItems : null		
+					{block.renderDrawerItems as ReactNode ? 
+						block.renderDrawerItems as ReactNode : null		
 					}
 				</div>
 			</div>
