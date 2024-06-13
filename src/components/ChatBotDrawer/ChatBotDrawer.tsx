@@ -1,6 +1,5 @@
 import React, { ReactNode} from 'react';
 import "./ChatBotDrawer.css";
-import { useBotOptions } from '../../context/BotOptionsContext';
 import { Flow } from '../../types/Flow';
 
 
@@ -14,7 +13,6 @@ const ChatBotDrawer = ({
 	getCurrPath: () => keyof Flow | null ;
 	flow: Flow;
 	}) => {
-	const { botOptions } = useBotOptions();
 
 	const currPath = getCurrPath();
 	if (!currPath) {
@@ -27,16 +25,9 @@ const ChatBotDrawer = ({
 		return;
 	}
 	
-	const headerStyle: React.CSSProperties = {
-		background: `linear-gradient(to right, ${botOptions.theme?.secondaryColor },
-			${botOptions.theme?.primaryColor})`,
-		...botOptions.headerStyle
-	}
 	return (
 		<div>			
 			<div className={`rcb-chat-drawer-container ${isOpenDrawer == false ? 'open' : ""}`}>
-				<div  style={headerStyle} className="rcb-chat-header-container">					
-				</div>
 				<div>
 					{block.renderDrawerItems as ReactNode ? 
 						block.renderDrawerItems as ReactNode : null		
