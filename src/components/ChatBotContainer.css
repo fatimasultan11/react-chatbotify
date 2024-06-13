@@ -12,8 +12,8 @@
 	right: 20px;
 	bottom: 20px;
 	border-radius: 10px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	background-color: #fff;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	background: var(--Main-Gredient---Popup, linear-gradient(96deg, rgba(255, 255, 255, 0.70) 0.34%, rgba(255, 255, 255, 0.50) 98.94%));
 	transition: all 0.3s ease;
 	overflow: hidden;
 	display: flex;
@@ -48,6 +48,7 @@
 		transform: translate(100%, 100%) scale(0);
 		opacity: 0;
 	}
+
 	100% {
 		transform: translate(0, 0) scale(1);
 		opacity: 1;
@@ -59,6 +60,7 @@
 		transform: translate(0, 0) scale(1);
 		opacity: 1;
 	}
+
 	100% {
 		transform: translate(100%, 100%) scale(0);
 		opacity: 0;

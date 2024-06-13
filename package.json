@@ -44,8 +44,6 @@
   },
   "devDependencies": {
     "@types/dom-speech-recognition": "^0.0.4",
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@vitejs/plugin-react": "^4.0.4",
     "chromedriver": "^125.0.0",
@@ -76,6 +74,8 @@
     ]
   },
   "dependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "@typescript-eslint/parser": "^7.11.0"
   }
 }

@@ -18,13 +18,13 @@ function qu() {
   mu = 1;
   var I = xo, h = Symbol.for("react.element"), S = Symbol.for("react.fragment"), x = Object.prototype.hasOwnProperty, f = I.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, R = { key: !0, ref: !0, __self: !0, __source: !0 };
   function W(B, j, E) {
-    var V, P = {}, _ = null, fe = null;
+    var G, P = {}, _ = null, fe = null;
     E !== void 0 && (_ = "" + E), j.key !== void 0 && (_ = "" + j.key), j.ref !== void 0 && (fe = j.ref);
-    for (V in j)
-      x.call(j, V) && !R.hasOwnProperty(V) && (P[V] = j[V]);
+    for (G in j)
+      x.call(j, G) && !R.hasOwnProperty(G) && (P[G] = j[G]);
     if (B && B.defaultProps)
-      for (V in j = B.defaultProps, j)
-        P[V] === void 0 && (P[V] = j[V]);
+      for (G in j = B.defaultProps, j)
+        P[G] === void 0 && (P[G] = j[G]);
     return { $$typeof: h, type: B, key: _, ref: fe, props: P, _owner: f.current };
   }
   return Ei.Fragment = S, Ei.jsx = W, Ei.jsxs = W, Ei;
@@ -42,7 +42,7 @@ var Ci = {};
 var Eu;
 function _u() {
   return Eu || (Eu = 1, process.env.NODE_ENV !== "production" && function() {
-    var I = xo, h = Symbol.for("react.element"), S = Symbol.for("react.portal"), x = Symbol.for("react.fragment"), f = Symbol.for("react.strict_mode"), R = Symbol.for("react.profiler"), W = Symbol.for("react.provider"), B = Symbol.for("react.context"), j = Symbol.for("react.forward_ref"), E = Symbol.for("react.suspense"), V = Symbol.for("react.suspense_list"), P = Symbol.for("react.memo"), _ = Symbol.for("react.lazy"), fe = Symbol.for("react.offscreen"), $ = Symbol.iterator, re = "@@iterator";
+    var I = xo, h = Symbol.for("react.element"), S = Symbol.for("react.portal"), x = Symbol.for("react.fragment"), f = Symbol.for("react.strict_mode"), R = Symbol.for("react.profiler"), W = Symbol.for("react.provider"), B = Symbol.for("react.context"), j = Symbol.for("react.forward_ref"), E = Symbol.for("react.suspense"), G = Symbol.for("react.suspense_list"), P = Symbol.for("react.memo"), _ = Symbol.for("react.lazy"), fe = Symbol.for("react.offscreen"), $ = Symbol.iterator, re = "@@iterator";
     function H(N) {
       if (N === null || typeof N != "object")
         return null;
@@ -70,7 +70,7 @@ function _u() {
     var de = !1, Ae = !1, ve = !1, le = !1, be = !1, Ie;
     Ie = Symbol.for("react.module.reference");
     function xe(N) {
-      return !!(typeof N == "string" || typeof N == "function" || N === x || N === R || be || N === f || N === E || N === V || le || N === fe || de || Ae || ve || typeof N == "object" && N !== null && (N.$$typeof === _ || N.$$typeof === P || N.$$typeof === W || N.$$typeof === B || N.$$typeof === j || // This needs to include all possible module reference object
+      return !!(typeof N == "string" || typeof N == "function" || N === x || N === R || be || N === f || N === E || N === G || le || N === fe || de || Ae || ve || typeof N == "object" && N !== null && (N.$$typeof === _ || N.$$typeof === P || N.$$typeof === W || N.$$typeof === B || N.$$typeof === j || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -104,7 +104,7 @@ function _u() {
           return "StrictMode";
         case E:
           return "Suspense";
-        case V:
+        case G:
           return "SuspenseList";
       }
       if (typeof N == "object")
@@ -300,7 +300,7 @@ function _u() {
       switch (N) {
         case E:
           return bt("Suspense");
-        case V:
+        case G:
           return bt("SuspenseList");
       }
       if (typeof N == "object")
@@ -635,10 +635,10 @@ const $u = ({
   handleToggleNotification: S,
   handleToggleAudio: x
 }) => {
-  var E, V, P, _, fe, $, re, H, b, ee, ge, de;
+  var E, G, P, _, fe, $, re, H, b, ee, ge, de;
   const { botOptions: f, setBotOptions: R } = Gt(), W = {
     background: `linear-gradient(to right, ${(E = f.theme) == null ? void 0 : E.secondaryColor},
-			${(V = f.theme) == null ? void 0 : V.primaryColor})`,
+			${(G = f.theme) == null ? void 0 : G.primaryColor})`,
     ...f.headerStyle
   }, B = {
     headerAvatar: {
@@ -711,7 +711,7 @@ const es = ({
   }, E = () => {
     W(!1);
   };
-  function V(H) {
+  function G(H) {
     if (!I.current)
       return;
     const b = I.current.scrollTop, ge = I.current.scrollHeight - I.current.clientHeight - b, de = 20;
@@ -736,7 +736,7 @@ const es = ({
       onMouseLeave: E,
       style: R ? B : f.chatMessagePromptStyle,
       onMouseDown: (H) => {
-        H.preventDefault(), V(600);
+        H.preventDefault(), G(600);
       },
       className: "rcb-message-prompt-text",
       children: (re = f.chatWindow) == null ? void 0 : re.messagePromptText
@@ -756,20 +756,20 @@ const ts = ({
   setUnreadCount: E
 }) => {
   var de, Ae, ve, le, be, Ie, xe, Oe, ke, Ve;
-  const { botOptions: V } = Gt(), { messages: P } = Yu(), _ = {
-    ...V == null ? void 0 : V.bodyStyle,
-    scrollbarWidth: (de = V.chatWindow) != null && de.showScrollbar ? "auto" : "none"
+  const { botOptions: G } = Gt(), { messages: P } = Yu(), _ = {
+    ...G == null ? void 0 : G.bodyStyle,
+    scrollbarWidth: (de = G.chatWindow) != null && de.showScrollbar ? "auto" : "none"
   }, fe = {
-    backgroundColor: (Ae = V.theme) == null ? void 0 : Ae.primaryColor,
+    backgroundColor: (Ae = G.theme) == null ? void 0 : Ae.primaryColor,
     color: "#fff",
-    maxWidth: (ve = V.userBubble) != null && ve.showAvatar ? "65%" : "70%",
-    ...V.userBubbleStyle
-  }, $ = (le = V.userBubble) != null && le.animate ? "rcb-user-message-entry" : "", re = {
-    backgroundColor: (be = V.theme) == null ? void 0 : be.secondaryColor,
+    maxWidth: (ve = G.userBubble) != null && ve.showAvatar ? "65%" : "70%",
+    ...G.userBubbleStyle
+  }, $ = (le = G.userBubble) != null && le.animate ? "rcb-user-message-entry" : "", re = {
+    backgroundColor: (be = G.theme) == null ? void 0 : be.secondaryColor,
     color: "#fff",
-    maxWidth: (Ie = V.botBubble) != null && Ie.showAvatar ? "65%" : "70%",
-    ...V.botBubbleStyle
-  }, H = (xe = V.botBubble) != null && xe.animate ? "rcb-bot-message-entry" : "";
+    maxWidth: (Ie = G.botBubble) != null && Ie.showAvatar ? "65%" : "70%",
+    ...G.botBubbleStyle
+  }, H = (xe = G.botBubble) != null && xe.animate ? "rcb-bot-message-entry" : "";
   Vt(() => {
     var Le;
     if (I.current) {
@@ -778,10 +778,10 @@ const ts = ({
         I.current.scrollTop = I.current.scrollTop + Je, R(!1);
         return;
       }
-      ((Le = V.chatWindow) != null && Le.autoJumpToBottom || !W) && (I.current.scrollTop = I.current.scrollHeight, V.isOpen && E(0));
+      ((Le = G.chatWindow) != null && Le.autoJumpToBottom || !W) && (I.current.scrollTop = I.current.scrollHeight, G.isOpen && E(0));
     }
   }, [P.length, h]), Vt(() => {
-    I.current && (f(I.current.scrollHeight), W || (I.current.scrollTop = I.current.scrollHeight, V.isOpen && E(0)));
+    I.current && (f(I.current.scrollHeight), W || (I.current.scrollTop = I.current.scrollHeight, G.isOpen && E(0)));
   }, [(Oe = I.current) == null ? void 0 : Oe.scrollHeight]), Vt(() => {
     W || E(0);
   }, [W]);
@@ -791,12 +791,12 @@ const ts = ({
       return;
     const { scrollTop: Le, clientHeight: Ue, scrollHeight: Je } = I.current;
     B(
-      Le + Ue < Je - (((At = V.chatWindow) == null ? void 0 : At.messagePromptOffset) || 30)
+      Le + Ue < Je - (((At = G.chatWindow) == null ? void 0 : At.messagePromptOffset) || 30)
     ), !W && Le + Ue >= Je - 1 && (I.current.scrollTop = Je - Ue - 1);
   }, ee = (Le) => {
     var Ue, Je, At;
     return /* @__PURE__ */ F.jsxs(F.Fragment, { children: [
-      (Ue = V == null ? void 0 : V.userBubble) != null && Ue.dangerouslySetInnerHtml ? /* @__PURE__ */ F.jsx(
+      (Ue = G == null ? void 0 : G.userBubble) != null && Ue.dangerouslySetInnerHtml ? /* @__PURE__ */ F.jsx(
         "div",
         {
           style: { ...fe, display: "inline" },
@@ -811,10 +811,10 @@ const ts = ({
           children: Le.content
         }
       ),
-      ((Je = V.userBubble) == null ? void 0 : Je.showAvatar) && /* @__PURE__ */ F.jsx(
+      ((Je = G.userBubble) == null ? void 0 : Je.showAvatar) && /* @__PURE__ */ F.jsx(
         "div",
         {
-          style: { backgroundImage: `url(${(At = V.userBubble) == null ? void 0 : At.avatar})` },
+          style: { backgroundImage: `url(${(At = G.userBubble) == null ? void 0 : At.avatar})` },
           className: "rcb-message-user-avatar"
         }
       )
@@ -822,14 +822,14 @@ const ts = ({
   }, ge = (Le) => {
     var Ue, Je, At;
     return /* @__PURE__ */ F.jsxs(F.Fragment, { children: [
-      ((Ue = V.botBubble) == null ? void 0 : Ue.showAvatar) && /* @__PURE__ */ F.jsx(
+      ((Ue = G.botBubble) == null ? void 0 : Ue.showAvatar) && /* @__PURE__ */ F.jsx(
         "div",
         {
-          style: { backgroundImage: `url(${(Je = V.botBubble) == null ? void 0 : Je.avatar})` },
+          style: { backgroundImage: `url(${(Je = G.botBubble) == null ? void 0 : Je.avatar})` },
           className: "rcb-message-bot-avatar"
         }
       ),
-      (At = V == null ? void 0 : V.botBubble) != null && At.dangerouslySetInnerHtml ? /* @__PURE__ */ F.jsx(
+      (At = G == null ? void 0 : G.botBubble) != null && At.dangerouslySetInnerHtml ? /* @__PURE__ */ F.jsx(
         "div",
         {
           style: { ...re, display: "inline" },
@@ -863,10 +863,10 @@ const ts = ({
           Ue
         )),
         h && /* @__PURE__ */ F.jsxs("div", { className: "rcb-bot-message-container", children: [
-          ((ke = V.botBubble) == null ? void 0 : ke.showAvatar) && /* @__PURE__ */ F.jsx(
+          ((ke = G.botBubble) == null ? void 0 : ke.showAvatar) && /* @__PURE__ */ F.jsx(
             "div",
             {
-              style: { backgroundImage: `url(${(Ve = V.botBubble) == null ? void 0 : Ve.avatar})` },
+              style: { backgroundImage: `url(${(Ve = G.botBubble) == null ? void 0 : Ve.avatar})` },
               className: "rcb-message-bot-avatar"
             }
           ),
@@ -901,12 +901,12 @@ const ts = ({
 const rs = ({
   handleSubmit: I
 }) => {
-  var E, V, P;
+  var E, G, P;
   const { botOptions: h } = Gt(), [S, x] = We(!1), f = {
     backgroundColor: (E = h.theme) == null ? void 0 : E.primaryColor,
     ...h.sendButtonStyle
   }, R = {
-    backgroundColor: (V = h.theme) == null ? void 0 : V.secondaryColor,
+    backgroundColor: (G = h.theme) == null ? void 0 : G.secondaryColor,
     ...h.sendButtonHoveredStyle
   }, W = {
     backgroundImage: `url(${(P = h.chatInput) == null ? void 0 : P.sendButtonIcon})`
@@ -941,9 +941,9 @@ const ns = (I, h, S, x, f) => {
   on.onresult = (E) => {
     var P, _;
     clearTimeout(Zn), Zn = null, clearTimeout(hu);
-    const V = E.results[E.results.length - 1][0].transcript;
+    const G = E.results[E.results.length - 1][0].transcript;
     if (f.current) {
-      const fe = (P = I.chatInput) == null ? void 0 : P.characterLimit, $ = f.current.value + V;
+      const fe = (P = I.chatInput) == null ? void 0 : P.characterLimit, $ = f.current.value + G;
       fe != null && fe >= 0 && $.length > fe ? f.current.value = $.slice(0, fe) : f.current.value = $, x(f.current.value.length);
     }
     Zn = setTimeout(() => pu(h), R), (_ = I.voice) != null && _.autoSendDisabled || (hu = setTimeout(S, W));
@@ -1063,7 +1063,7 @@ const as = ({
   handleActionInput: W
 }) => {
   var xe, Oe, ke, Ve, Le, Ue, Je, At, ot, gt, zt;
-  const { botOptions: B } = Gt(), [j, E] = We(!1), [V, P] = We(0), [_, fe] = We(!1);
+  const { botOptions: B } = Gt(), [j, E] = We(!1), [G, P] = We(0), [_, fe] = We(!1);
   Vt(() => {
     var we;
     const De = f();
@@ -1176,9 +1176,9 @@ const as = ({
             "div",
             {
               className: "rcb-chat-input-char-counter",
-              style: V >= ((gt = B.chatInput) == null ? void 0 : gt.characterLimit) ? ee : b,
+              style: G >= ((gt = B.chatInput) == null ? void 0 : gt.characterLimit) ? ee : b,
               children: [
-                V,
+                G,
                 "/",
                 (zt = B.chatInput) == null ? void 0 : zt.characterLimit
               ]
@@ -1193,9 +1193,9 @@ const us = ({
   inputRef: I,
   textAreaDisabled: h
 }) => {
-  var V, P, _, fe;
+  var G, P, _, fe;
   const { botOptions: S } = Gt(), x = Zr(null), f = Zr(null), [R, W] = We(!1), B = {
-    cursor: `url(${(V = S.theme) == null ? void 0 : V.actionDisabledIcon}), auto`
+    cursor: `url(${(G = S.theme) == null ? void 0 : G.actionDisabledIcon}), auto`
   };
   Vt(() => {
     const $ = (b) => {
@@ -1264,14 +1264,14 @@ const ss = ({
   openDrawer: j
 }) => {
   var $, re, H, b, ee;
-  const { botOptions: E } = Gt(), { paths: V } = Na(), [P, _] = We(!1);
+  const { botOptions: E } = Gt(), { paths: G } = Na(), [P, _] = We(!1);
   Vt(() => {
     const ge = R();
     if (!ge)
       return;
     const de = h[ge];
     de && _(typeof de.file == "function");
-  }, [V]);
+  }, [G]);
   const fe = async (ge) => {
     var be, Ie;
     const de = ge.target.files;
@@ -1350,10 +1350,10 @@ const ls = ({
   openDrawer: E
 }) => {
   var P, _, fe;
-  const { botOptions: V } = Gt();
-  return /* @__PURE__ */ F.jsxs("div", { style: V.footerStyle, className: "rcb-chat-footer-container", children: [
+  const { botOptions: G } = Gt();
+  return /* @__PURE__ */ F.jsxs("div", { style: G.footerStyle, className: "rcb-chat-footer-container", children: [
     /* @__PURE__ */ F.jsxs("div", { className: "rcb-chat-footer", children: [
-      !((P = V.fileAttachment) != null && P.disabled) && /* @__PURE__ */ F.jsx(
+      !((P = G.fileAttachment) != null && P.disabled) && /* @__PURE__ */ F.jsx(
         ss,
         {
           inputRef: I,
@@ -1367,37 +1367,36 @@ const ls = ({
           openDrawer: E
         }
       ),
-      !((_ = V.emoji) != null && _.disabled) && /* @__PURE__ */ F.jsx(us, { inputRef: I, textAreaDisabled: S })
+      !((_ = G.emoji) != null && _.disabled) && /* @__PURE__ */ F.jsx(us, { inputRef: I, textAreaDisabled: S })
     ] }),
-    /* @__PURE__ */ F.jsx("span", { children: (fe = V.footer) == null ? void 0 : fe.text })
+    /* @__PURE__ */ F.jsx("span", { children: (fe = G.footer) == null ? void 0 : fe.text })
   ] });
 };
 const cs = ({
   unreadCount: I
 }) => {
-  var R, W, B, j, E, V;
+  var R, W, B, j;
   const { botOptions: h, setBotOptions: S } = Gt(), x = () => {
     S({ ...h, isOpen: !h.isOpen });
   }, f = {
-    backgroundImage: `url(${(R = h.chatButton) == null ? void 0 : R.icon}),
-			linear-gradient(to right, ${(W = h.theme) == null ? void 0 : W.secondaryColor}, ${(B = h.theme) == null ? void 0 : B.primaryColor})`,
-    width: 75,
-    height: 75,
+    backgroundImage: `url(${(R = h.chatButton) == null ? void 0 : R.icon})`,
+    height: 175,
+    paddingRight: 270,
     ...h.chatButtonStyle
   };
-  return /* @__PURE__ */ F.jsx(F.Fragment, { children: !((j = h.theme) != null && j.embedded) && /* @__PURE__ */ F.jsx(
+  return /* @__PURE__ */ F.jsx(F.Fragment, { children: !((W = h.theme) != null && W.embedded) && /* @__PURE__ */ F.jsx(
     "button",
     {
       "aria-label": "Open Chat",
       style: f,
       className: `rcb-toggle-button ${h.isOpen ? "rcb-button-hide" : "rcb-button-show"}`,
       onClick: x,
-      children: !((E = h.notification) != null && E.disabled) && ((V = h.notification) == null ? void 0 : V.showCount) && /* @__PURE__ */ F.jsx("span", { style: h.notificationBadgeStyle, className: "rcb-badge", children: I })
+      children: !((B = h.notification) != null && B.disabled) && ((j = h.notification) == null ? void 0 : j.showCount) && /* @__PURE__ */ F.jsx("span", { style: h.notificationBadgeStyle, className: "rcb-badge", children: I })
     }
   ) });
 };
 const fs = () => {
-  var V, P, _, fe, $;
+  var G, P, _, fe, $;
   const { botOptions: I, setBotOptions: h } = Gt(), [S, x] = We(!1), [f, R] = We(!1), [W, B] = We(0);
   Vt(() => {
     var H, b, ee;
@@ -1413,7 +1412,7 @@ const fs = () => {
   }, [I.isOpen]);
   const j = {
     transform: `translateX(-${W}px)`,
-    right: (((V = I.chatButtonStyle) == null ? void 0 : V.width) || 75) + 40,
+    right: (((G = I.chatButtonStyle) == null ? void 0 : G.width) || 75) + 40,
     bottom: 30,
     backgroundColor: (P = I.theme) == null ? void 0 : P.secondaryColor,
     color: (_ = I.theme) == null ? void 0 : _.secondaryColor,
@@ -1438,7 +1437,7 @@ const ds = ({
   chatHistory: I,
   showChatHistory: h
 }) => {
-  var j, E, V;
+  var j, E, G;
   const { botOptions: S } = Gt(), [x, f] = We(!1), R = {
     color: (j = S.theme) == null ? void 0 : j.primaryColor,
     borderColor: (E = S.theme) == null ? void 0 : E.primaryColor,
@@ -1458,7 +1457,7 @@ const ds = ({
         P.preventDefault(), h(I);
       },
       className: "rcb-view-history-button",
-      children: /* @__PURE__ */ F.jsx("p", { children: (V = S.chatHistory) == null ? void 0 : V.viewChatHistoryButtonText })
+      children: /* @__PURE__ */ F.jsx("p", { children: (G = S.chatHistory) == null ? void 0 : G.viewChatHistoryButtonText })
     }
   ) });
 };
@@ -1469,7 +1468,7 @@ const Ms = ({
   handleActionInput: x
 }) => {
   var re, H, b, ee, ge, de, Ae, ve, le, be, Ie;
-  const { botOptions: f } = Gt(), { paths: R } = Na(), [W, B] = We(/* @__PURE__ */ new Set()), [j, E] = We(!1), V = {
+  const { botOptions: f } = Gt(), { paths: R } = Na(), [W, B] = We(/* @__PURE__ */ new Set()), [j, E] = We(!1), G = {
     cursor: j ? `url(${(re = f.theme) == null ? void 0 : re.actionDisabledIcon}), auto` : "pointer",
     color: (H = f.theme) == null ? void 0 : H.primaryColor,
     borderColor: (b = f.theme) == null ? void 0 : b.primaryColor,
@@ -1513,7 +1512,7 @@ const Ms = ({
         onMouseDown: (Oe) => {
           Oe.preventDefault(), $(xe);
         },
-        style: V,
+        style: G,
         className: "rcb-checkbox-row-container",
         children: /* @__PURE__ */ F.jsxs("div", { className: "rcb-checkbox-row", children: [
           /* @__PURE__ */ F.jsx(
@@ -1587,7 +1586,7 @@ const ps = ({
     borderColor: (re = x.theme) == null ? void 0 : re.primaryColor,
     backgroundColor: "#fff",
     ...x.botOptionStyle
-  }, V = {
+  }, G = {
     color: "#fff",
     borderColor: (H = x.theme) == null ? void 0 : H.primaryColor,
     backgroundColor: (b = x.theme) == null ? void 0 : b.primaryColor,
@@ -1613,7 +1612,7 @@ const ps = ({
       "div",
       {
         className: "rcb-options",
-        style: Ae ? V : E,
+        style: Ae ? G : E,
         onMouseEnter: () => P(de),
         onMouseLeave: () => _(de),
         onMouseDown: (ve) => {
@@ -1752,20 +1751,20 @@ function Is() {
     j[A] = new B(A, 5, !1, A.toLowerCase(), null, !1, !1);
   });
   var E = /[\-:]([a-z])/g;
-  function V(A) {
+  function G(A) {
     return A[1].toUpperCase();
   }
   "accent-height alignment-baseline arabic-form baseline-shift cap-height clip-path clip-rule color-interpolation color-interpolation-filters color-profile color-rendering dominant-baseline enable-background fill-opacity fill-rule flood-color flood-opacity font-family font-size font-size-adjust font-stretch font-style font-variant font-weight glyph-name glyph-orientation-horizontal glyph-orientation-vertical horiz-adv-x horiz-origin-x image-rendering letter-spacing lighting-color marker-end marker-mid marker-start overline-position overline-thickness paint-order panose-1 pointer-events rendering-intent shape-rendering stop-color stop-opacity strikethrough-position strikethrough-thickness stroke-dasharray stroke-dashoffset stroke-linecap stroke-linejoin stroke-miterlimit stroke-opacity stroke-width text-anchor text-decoration text-rendering underline-position underline-thickness unicode-bidi unicode-range units-per-em v-alphabetic v-hanging v-ideographic v-mathematical vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mode xmlns:xlink x-height".split(" ").forEach(function(A) {
     var s = A.replace(
       E,
-      V
+      G
     );
     j[s] = new B(s, 1, !1, A, null, !1, !1);
   }), "xlink:actuate xlink:arcrole xlink:role xlink:show xlink:title xlink:type".split(" ").forEach(function(A) {
-    var s = A.replace(E, V);
+    var s = A.replace(E, G);
     j[s] = new B(s, 1, !1, A, "http://www.w3.org/1999/xlink", !1, !1);
   }), ["xml:base", "xml:lang", "xml:space"].forEach(function(A) {
-    var s = A.replace(E, V);
+    var s = A.replace(E, G);
     j[s] = new B(s, 1, !1, A, "http://www.w3.org/XML/1998/namespace", !1, !1);
   }), ["tabIndex", "crossOrigin"].forEach(function(A) {
     j[A] = new B(A, 1, !1, A.toLowerCase(), null, !1, !1);
@@ -3077,7 +3076,7 @@ function ws() {
   function E(o) {
     return B.encode(o);
   }
-  function V(o, l) {
+  function G(o, l) {
     typeof o.error == "function" ? o.error(l) : o.close();
   }
   var P = Object.prototype.hasOwnProperty, _ = /^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/, fe = {}, $ = {};
@@ -3951,7 +3950,7 @@ function ws() {
   }
   function zn(o, l) {
     var M = o.onShellError;
-    M(l), M = o.onFatalError, M(l), o.destination !== null ? (o.status = 2, V(o.destination, l)) : (o.status = 1, o.fatalError = l);
+    M(l), M = o.onFatalError, M(l), o.destination !== null ? (o.status = 2, G(o.destination, l)) : (o.status = 1, o.fatalError = l);
   }
   function OA(o, l, M, v, k) {
     for (jr = {}, dn = l, Hr = 0, o = M(v, k); Ht; )
@@ -4362,7 +4361,7 @@ function ws() {
       }), J = _n(o, ot(l ? l.identifierPrefix : void 0, l ? l.nonce : void 0, l ? l.bootstrapScriptContent : void 0, l ? l.bootstrapScripts : void 0, l ? l.bootstrapModules : void 0), zt(l ? l.namespaceURI : void 0), l ? l.progressiveChunkSize : void 0, l ? l.onError : void 0, C, function() {
         var Te = new ReadableStream({ type: "bytes", pull: function($e) {
           if (J.status === 1)
-            J.status = 2, V($e, J.fatalError);
+            J.status = 2, G($e, J.fatalError);
           else if (J.status !== 2 && J.destination === null) {
             J.destination = $e;
             try {
@@ -4438,7 +4437,7 @@ function Ts() {
     function E(e, r) {
       return e.push(r);
     }
-    function V(e) {
+    function G(e) {
     }
     function P(e) {
       e.push(null);
@@ -5586,14 +5585,14 @@ function Ts() {
           return f("Received a `%s` for a string attribute `is`. If this is expected, cast the value to a string.", typeof i), qe[r] = !0, !0;
         if (typeof i == "number" && isNaN(i))
           return f("Received NaN for the `%s` attribute. If this is expected, cast the value to a string.", r), qe[r] = !0, !0;
-        var G = zt(r), te = G !== null && G.type === ve;
+        var V = zt(r), te = V !== null && V.type === ve;
         if (It.hasOwnProperty(d)) {
           var ae = It[d];
           if (ae !== r)
             return f("Invalid DOM property `%s`. Did you mean `%s`?", r, ae), qe[r] = !0, !0;
         } else if (!te && r !== d)
           return f("React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element.", r, d), qe[r] = !0, !0;
-        return typeof i == "boolean" && gt(r, i, G, !1) ? (i ? f('Received `%s` for a non-boolean attribute `%s`.\n\nIf you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}.', i, r, r, i, r) : f('Received `%s` for a non-boolean attribute `%s`.\n\nIf you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}.\n\nIf you used to conditionally omit it with %s={condition && value}, pass %s={condition ? value : undefined} instead.', i, r, r, i, r, r, r), qe[r] = !0, !0) : te ? !0 : gt(r, i, G, !1) ? (qe[r] = !0, !1) : ((i === "false" || i === "true") && G !== null && G.type === Ie && (f("Received the string `%s` for the boolean attribute `%s`. %s Did you mean %s={%s}?", i, r, i === "false" ? "The browser will interpret it as a truthy value." : 'Although this works, it will not work as expected if you pass the string "false".', r, i), qe[r] = !0), !0);
+        return typeof i == "boolean" && gt(r, i, V, !1) ? (i ? f('Received `%s` for a non-boolean attribute `%s`.\n\nIf you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}.', i, r, r, i, r) : f('Received `%s` for a non-boolean attribute `%s`.\n\nIf you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}.\n\nIf you used to conditionally omit it with %s={condition && value}, pass %s={condition ? value : undefined} instead.', i, r, r, i, r, r, r), qe[r] = !0, !0) : te ? !0 : gt(r, i, V, !1) ? (qe[r] = !0, !1) : ((i === "false" || i === "true") && V !== null && V.type === Ie && (f("Received the string `%s` for the boolean attribute `%s`. %s Did you mean %s={%s}?", i, r, i === "false" ? "The browser will interpret it as a truthy value." : 'Although this works, it will not work as expected if you pass the string "false".', r, i), qe[r] = !0), !0);
       };
     }
     var Xt = function(e, r, i) {
@@ -5697,8 +5696,8 @@ function Ts() {
     function Re(e, r, i, u, d) {
       var D = e === void 0 ? "" : e, w = r === void 0 ? Z : '<script nonce="' + Fe(r) + '">', O = [];
       if (i !== void 0 && O.push(w, Ce(i), K), u !== void 0)
-        for (var G = 0; G < u.length; G++)
-          O.push(ce, Fe(u[G]), ze);
+        for (var V = 0; V < u.length; V++)
+          O.push(ce, Fe(u[V]), ze);
       if (d !== void 0)
         for (var te = 0; te < d.length; te++)
           O.push(me, Fe(d[te]), ze);
@@ -5781,8 +5780,8 @@ function Ts() {
         if (Ae.call(i, d)) {
           var D = i[d];
           if (!(D == null || typeof D == "boolean" || D === "")) {
-            var w = void 0, O = void 0, G = d.indexOf("--") === 0;
-            G ? (w = Fe(d), ge(D, d), O = Fe(("" + D).trim())) : (Ze(d, D), w = Sr(d), typeof D == "number" ? D !== 0 && !Ae.call(kt, d) ? O = D + "px" : O = "" + D : (ge(D, d), O = Fe(("" + D).trim()))), u ? (u = !1, e.push(cn, w, Kr, O)) : e.push(qr, w, Kr, O);
+            var w = void 0, O = void 0, V = d.indexOf("--") === 0;
+            V ? (w = Fe(d), ge(D, d), O = Fe(("" + D).trim())) : (Ze(d, D), w = Sr(d), typeof D == "number" ? D !== 0 && !Ae.call(kt, d) ? O = D + "px" : O = "" + D : (ge(D, d), O = Fe(("" + D).trim()))), u ? (u = !1, e.push(cn, w, Kr, O)) : e.push(qr, w, Kr, O);
           }
         }
       u || e.push(p);
@@ -5904,7 +5903,7 @@ function Ts() {
     function Nr(e, r, i, u) {
       var d = u.selectedValue;
       e.push(Ht("option"));
-      var D = null, w = null, O = null, G = null;
+      var D = null, w = null, O = null, V = null;
       for (var te in r)
         if (Ae.call(r, te)) {
           var ae = r[te];
@@ -5918,7 +5917,7 @@ function Ts() {
               O = ae, Lr || (f("Use the `defaultValue` or `value` props on <select> instead of setting `selected` on <option>."), Lr = !0);
               break;
             case "dangerouslySetInnerHTML":
-              G = ae;
+              V = ae;
               break;
             case "value":
               w = ae;
@@ -5929,7 +5928,7 @@ function Ts() {
         }
       if (d != null) {
         var Ne;
-        if (w !== null ? (ee(w, "value"), Ne = "" + w) : (G !== null && (Et || (Et = !0, f("Pass a `value` prop if you set dangerouslyInnerHTML so React knows which value should be selected."))), Ne = mr(D)), N(d))
+        if (w !== null ? (ee(w, "value"), Ne = "" + w) : (V !== null && (Et || (Et = !0, f("Pass a `value` prop if you set dangerouslyInnerHTML so React knows which value should be selected."))), Ne = mr(D)), N(d))
           for (var ut = 0; ut < d.length; ut++) {
             ee(d[ut], "value");
             var xt = "" + d[ut];
@@ -5942,34 +5941,34 @@ function Ts() {
           ee(d, "select.value"), "" + d === Ne && e.push(Yr);
       } else
         O && e.push(Yr);
-      return e.push(U), ie(e, G, D), D;
+      return e.push(U), ie(e, V, D), D;
     }
     function fn(e, r, i) {
       yt("input", r), r.checked !== void 0 && r.defaultChecked !== void 0 && !se && (f("%s contains an input of type %s with both checked and defaultChecked props. Input elements must be either controlled or uncontrolled (specify either the checked prop, or the defaultChecked prop, but not both). Decide between using a controlled or uncontrolled input element and remove one of these props. More info: https://reactjs.org/link/controlled-components", "A component", r.type), se = !0), r.value !== void 0 && r.defaultValue !== void 0 && !he && (f("%s contains an input of type %s with both value and defaultValue props. Input elements must be either controlled or uncontrolled (specify either the value prop, or the defaultValue prop, but not both). Decide between using a controlled or uncontrolled input element and remove one of these props. More info: https://reactjs.org/link/controlled-components", "A component", r.type), he = !0), e.push(Ht("input"));
       var u = null, d = null, D = null, w = null;
       for (var O in r)
         if (Ae.call(r, O)) {
-          var G = r[O];
-          if (G == null)
+          var V = r[O];
+          if (V == null)
             continue;
           switch (O) {
             case "children":
             case "dangerouslySetInnerHTML":
               throw new Error("input is a self-closing tag and must neither have `children` nor use `dangerouslySetInnerHTML`.");
             case "defaultChecked":
-              w = G;
+              w = V;
               break;
             case "defaultValue":
-              d = G;
+              d = V;
               break;
             case "checked":
-              D = G;
+              D = V;
               break;
             case "value":
-              u = G;
+              u = V;
               break;
             default:
-              m(e, i, O, G);
+              m(e, i, O, V);
               break;
           }
         }
@@ -6152,9 +6151,9 @@ function Ts() {
           throw new Error("Can only set one of `children` or `props.dangerouslySetInnerHTML`.");
         if (typeof D != "object" || !("__html" in D))
           throw new Error("`props.dangerouslySetInnerHTML` must be in the form `{__html: ...}`. Please visit https://reactjs.org/link/dangerously-set-inner-html for more information.");
-        var G = D.__html;
-        G != null && (typeof G == "string" && G.length > 0 && G[0] === `
-` ? e.push(dn, G) : (de(G), e.push("" + G)));
+        var V = D.__html;
+        V != null && (typeof V == "string" && V.length > 0 && V[0] === `
+` ? e.push(dn, V) : (de(V), e.push("" + V)));
       }
       return typeof d == "string" && d[0] === `
 ` && e.push(dn), d;
@@ -6587,14 +6586,14 @@ function Ts() {
       } catch (vr) {
         if (vr && u && typeof vr.stack == "string") {
           for (var O = vr.stack.split(`
-`), G = u.stack.split(`
-`), te = O.length - 1, ae = G.length - 1; te >= 1 && ae >= 0 && O[te] !== G[ae]; )
+`), V = u.stack.split(`
+`), te = O.length - 1, ae = V.length - 1; te >= 1 && ae >= 0 && O[te] !== V[ae]; )
             ae--;
           for (; te >= 1 && ae >= 0; te--, ae--)
-            if (O[te] !== G[ae]) {
+            if (O[te] !== V[ae]) {
               if (te !== 1 || ae !== 1)
                 do
-                  if (te--, ae--, ae < 0 || O[te] !== G[ae]) {
+                  if (te--, ae--, ae < 0 || O[te] !== V[ae]) {
                     var Ne = `
 ` + O[te].replace(" at new ", " at ");
                     return e.displayName && Ne.includes("<anonymous>") && (Ne = Ne.replace("<anonymous>", e.displayName)), typeof e == "function" && qA.set(e, Ne), Ne;
@@ -6664,8 +6663,8 @@ function Ts() {
             var O = void 0;
             try {
               if (typeof e[w] != "function") {
-                var G = Error((u || "React class") + ": " + i + " type `" + w + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof e[w] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
-                throw G.name = "Invariant Violation", G;
+                var V = Error((u || "React class") + ": " + i + " type `" + w + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof e[w] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+                throw V.name = "Invariant Violation", V;
               }
               O = e[w](r, w, u, i, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
             } catch (te) {
@@ -6866,8 +6865,8 @@ Please check the code for the %s component.`, r, r, u), no[d] = !0;
       var O = new e(r, u);
       {
         if (typeof e.getDerivedStateFromProps == "function" && (O.state === null || O.state === void 0)) {
-          var G = Mt(e) || "Component";
-          MA.has(G) || (MA.add(G), f("`%s` uses `getDerivedStateFromProps` but its initial state is %s. This is not recommended. Instead, define the initial state by assigning an object to `this.state` in the constructor of `%s`. This ensures that `getDerivedStateFromProps` arguments have a consistent shape.", G, O.state === null ? "null" : "undefined", G));
+          var V = Mt(e) || "Component";
+          MA.has(V) || (MA.add(V), f("`%s` uses `getDerivedStateFromProps` but its initial state is %s. This is not recommended. Instead, define the initial state by assigning an object to `this.state` in the constructor of `%s`. This ensures that `getDerivedStateFromProps` arguments have a consistent shape.", V, O.state === null ? "null" : "undefined", V));
         }
         if (typeof e.getDerivedStateFromProps == "function" || typeof O.getSnapshotBeforeUpdate == "function") {
           var te = null, ae = null, Ne = null;
@@ -6922,8 +6921,8 @@ Please update the following components: %s`,
         if (e.queue = null, e.replace = !1, D && d.length === 1)
           r.state = d[0];
         else {
-          for (var w = D ? d[0] : r.state, O = !0, G = D ? 1 : 0; G < d.length; G++) {
-            var te = d[G], ae = typeof te == "function" ? te.call(r, w, i, u) : te;
+          for (var w = D ? d[0] : r.state, O = !0, V = D ? 1 : 0; V < d.length; V++) {
+            var te = d[V], ae = typeof te == "function" ? te.call(r, w, i, u) : te;
             ae != null && (O ? (O = !1, w = rr({}, w, ae)) : rr(w, ae));
           }
           r.state = w;
@@ -6945,8 +6944,8 @@ Please update the following components: %s`,
         var O = Mt(r) || "Component";
         ao.has(O) || (ao.add(O), f("%s: It is not recommended to assign props directly to state because updates to props won't be reflected in state. In most cases, it is better to use props directly.", O));
       }
-      var G = r.getDerivedStateFromProps;
-      typeof G == "function" && (e.state = Pa(e, r, G, d, i)), typeof r.getDerivedStateFromProps != "function" && typeof e.getSnapshotBeforeUpdate != "function" && (typeof e.UNSAFE_componentWillMount == "function" || typeof e.componentWillMount == "function") && (Ua(r, e), Ra(D, e, i, u));
+      var V = r.getDerivedStateFromProps;
+      typeof V == "function" && (e.state = Pa(e, r, V, d, i)), typeof r.getDerivedStateFromProps != "function" && typeof e.getSnapshotBeforeUpdate != "function" && (typeof e.UNSAFE_componentWillMount == "function" || typeof e.componentWillMount == "function") && (Ua(r, e), Ra(D, e, i, u));
     }
     var co = {
       id: 1,
@@ -6957,8 +6956,8 @@ Please update the following components: %s`,
       return u.toString(32) + r;
     }
     function si(e, r, i) {
-      var u = e.id, d = e.overflow, D = fo(u) - 1, w = u & ~(1 << D), O = i + 1, G = fo(r) + D;
-      if (G > 30) {
+      var u = e.id, d = e.overflow, D = fo(u) - 1, w = u & ~(1 << D), O = i + 1, V = fo(r) + D;
+      if (V > 30) {
         var te = D - D % 5, ae = (1 << te) - 1, Ne = (w & ae).toString(32), ut = w >> te, xt = D - te, vr = fo(r) + xt, ha = O << xt, ya = ha | ut, pa = Ne + d;
         return {
           id: 1 << vr | ya,
@@ -6967,7 +6966,7 @@ Please update the following components: %s`,
       } else {
         var Eo = O << D, Zu = Eo | w, Xu = d;
         return {
-          id: 1 << G | Zu,
+          id: 1 << V | Zu,
           overflow: Xu
         };
       }
@@ -7060,8 +7059,8 @@ Incoming: %s`, jn, "[" + e.join(", ") + "]", "[" + r.join(", ") + "]");
             Ct.delete(u);
             var w = Ge.memoizedState, O = D;
             do {
-              var G = O.action;
-              kr = !0, w = e(w, G), kr = !1, O = O.next;
+              var V = O.action;
+              kr = !0, w = e(w, V), kr = !1, O = O.next;
             } while (O !== null);
             return Ge.memoizedState = w, [w, d];
           }
@@ -7214,7 +7213,7 @@ Error generating stack: ` + u.message + `
     }
     function vA() {
     }
-    function gi(e, r, i, u, d, D, w, O, G) {
+    function gi(e, r, i, u, d, D, w, O, V) {
       var te = [], ae = /* @__PURE__ */ new Set(), Ne = {
         destination: null,
         responseState: r,
@@ -7234,7 +7233,7 @@ Error generating stack: ` + u.message + `
         onAllReady: D === void 0 ? vA : D,
         onShellReady: w === void 0 ? vA : w,
         onShellError: O === void 0 ? vA : O,
-        onFatalError: G === void 0 ? vA : G
+        onFatalError: V === void 0 ? vA : V
       }, ut = nn(
         Ne,
         0,
@@ -7269,10 +7268,10 @@ Error generating stack: ` + u.message + `
     }
     function DA(e, r, i, u, d, D, w, O) {
       e.allPendingTasks++, i === null ? e.pendingRootTasks++ : i.pendingTasks++;
-      var G = {
+      var V = {
         node: r,
         ping: function() {
-          return No(e, G);
+          return No(e, V);
         },
         blockedBoundary: i,
         blockedSegment: u,
@@ -7281,7 +7280,7 @@ Error generating stack: ` + u.message + `
         context: w,
         treeContext: O
       };
-      return G.componentStack = null, d.add(G), G;
+      return V.componentStack = null, d.add(V), V;
     }
     function nn(e, r, i, u, d, D) {
       return {
@@ -7349,10 +7348,10 @@ Error generating stack: ` + u.message + `
     }
     function Aa(e, r, i) {
       yr(r, "Suspense");
-      var u = r.blockedBoundary, d = r.blockedSegment, D = i.fallback, w = i.children, O = /* @__PURE__ */ new Set(), G = Gr(e, O), te = d.chunks.length, ae = nn(
+      var u = r.blockedBoundary, d = r.blockedSegment, D = i.fallback, w = i.children, O = /* @__PURE__ */ new Set(), V = Gr(e, O), te = d.chunks.length, ae = nn(
         e,
         te,
-        G,
+        V,
         d.formatContext,
         // boundaries never require text embedding at their edges because comment nodes bound them
         !1,
@@ -7368,14 +7367,14 @@ Error generating stack: ` + u.message + `
         !1,
         !1
       );
-      Ne.parentFlushed = !0, r.blockedBoundary = G, r.blockedSegment = Ne;
+      Ne.parentFlushed = !0, r.blockedBoundary = V, r.blockedSegment = Ne;
       try {
-        if (Io(e, r, w), zi(Ne.chunks, e.responseState, Ne.lastPushedText, Ne.textEmbedded), Ne.status = In, IA(G, Ne), G.pendingTasks === 0) {
+        if (Io(e, r, w), zi(Ne.chunks, e.responseState, Ne.lastPushedText, Ne.textEmbedded), Ne.status = In, IA(V, Ne), V.pendingTasks === 0) {
           pr(r);
           return;
         }
       } catch (xt) {
-        Ne.status = wn, G.forceClientRender = !0, G.errorDigest = LA(e, xt), pi(G, xt);
+        Ne.status = wn, V.forceClientRender = !0, V.errorDigest = LA(e, xt), pi(V, xt);
       } finally {
         r.blockedBoundary = u, r.blockedSegment = d;
       }
@@ -7404,8 +7403,8 @@ Error generating stack: ` + u.message + `
       {
         var w = u.childContextTypes;
         if (w != null) {
-          var O = r.legacyContext, G = yn(i, u, O, w);
-          r.legacyContext = G, Ar(e, r, D), r.legacyContext = O;
+          var O = r.legacyContext, V = yn(i, u, O, w);
+          r.legacyContext = V, Ar(e, r, D), r.legacyContext = O;
           return;
         }
       }
@@ -7425,8 +7424,8 @@ Error generating stack: ` + u.message + `
       }
       var w = vi(e, r, i, u, d), O = Ki();
       if (typeof w == "object" && w !== null && typeof w.render == "function" && w.$$typeof === void 0) {
-        var G = Mt(i) || "Unknown";
-        jA[G] || (f("The <%s /> component appears to be a function component that returns a class instance. Change %s to a class that extends React.Component instead. If you can't use a class try assigning the prototype on the function as a workaround. `%s.prototype = React.Component.prototype`. Don't use an arrow function since it cannot be called with `new` by React.", G, G, G), jA[G] = !0);
+        var V = Mt(i) || "Unknown";
+        jA[V] || (f("The <%s /> component appears to be a function component that returns a class instance. Change %s to a class that extends React.Component instead. If you can't use a class try assigning the prototype on the function as a workaround. `%s.prototype = React.Component.prototype`. Don't use an arrow function since it cannot be called with `new` by React.", V, V, V), jA[V] = !0);
       }
       if (
         // Run these checks in production only if the flag is off.
@@ -7475,8 +7474,8 @@ Error generating stack: ` + u.message + `
       Gn(r, i.render);
       var D = vi(e, r, i.render, u, d), w = Ki();
       if (w) {
-        var O = r.treeContext, G = 1, te = 0;
-        r.treeContext = si(O, G, te);
+        var O = r.treeContext, V = 1, te = 0;
+        r.treeContext = si(O, V, te);
         try {
           Ar(e, r, D);
         } finally {
@@ -7503,8 +7502,8 @@ Error generating stack: ` + u.message + `
     }
     function nr(e, r, i, u, d) {
       yr(r, "Lazy");
-      var D = i._payload, w = i._init, O = w(D), G = sa(O, u);
-      Ti(e, r, O, G, d), pr(r);
+      var D = i._payload, w = i._init, O = w(D), V = sa(O, u);
+      Ti(e, r, O, V, d), pr(r);
     }
     function Ti(e, r, i, u, d) {
       if (typeof i == "function")
@@ -7587,9 +7586,9 @@ Error generating stack: ` + u.message + `
           case Fo:
             throw new Error("Portals are not currently supported by the server renderer. Render them conditionally so that they only appear on the client render.");
           case JA: {
-            var O = i, G = O._payload, te = O._init, ae;
+            var O = i, V = O._payload, te = O._init, ae;
             try {
-              ae = te(G);
+              ae = te(V);
             } catch (Eo) {
               throw typeof Eo == "object" && Eo !== null && typeof Eo.then == "function" && yr(r, "Lazy"), Eo;
             }
@@ -7710,8 +7709,8 @@ Error generating stack: ` + u.message + `
         if (u.fallbackAbortableTasks.forEach(function(te) {
           return da(te, r, i);
         }), u.fallbackAbortableTasks.clear(), r.allPendingTasks--, r.allPendingTasks === 0) {
-          var G = r.onAllReady;
-          G();
+          var V = r.onAllReady;
+          V();
         }
       }
     }
@@ -7784,8 +7783,8 @@ Error generating stack: ` + u.message + `
             To(e, O);
           }
           D.splice(0, w), e.destination !== null && mo(e, e.destination);
-        } catch (G) {
-          LA(e, G), jo(e, G);
+        } catch (V) {
+          LA(e, V), jo(e, V);
         } finally {
           vo(d), rn.current = i, Do.getCurrentStack = u, i === ta && to(r);
         }
@@ -7799,8 +7798,8 @@ Error generating stack: ` + u.message + `
         }
         case In: {
           i.status = ra;
-          for (var d = !0, D = i.chunks, w = 0, O = i.children, G = 0; G < O.length; G++) {
-            for (var te = O[G]; w < te.index; w++)
+          for (var d = !0, D = i.chunks, w = 0, O = i.children, V = 0; V < O.length; V++) {
+            for (var te = O[V]; w < te.index; w++)
               j(r, D[w]);
             d = SA(e, r, te);
           }
@@ -7888,15 +7887,15 @@ Error generating stack: ` + u.message + `
           }
         }
         w.splice(0, d);
-        var G = e.partialBoundaries;
-        for (d = 0; d < G.length; d++) {
-          var te = G[d];
+        var V = e.partialBoundaries;
+        for (d = 0; d < V.length; d++) {
+          var te = V[d];
           if (!Mu(e, r, te)) {
-            e.destination = null, d++, G.splice(0, d);
+            e.destination = null, d++, V.splice(0, d);
             return;
           }
         }
-        G.splice(0, d);
+        V.splice(0, d);
         var ae = e.completedBoundaries;
         for (d = 0; d < ae.length; d++) {
           var Ne = ae[d];
@@ -7949,14 +7948,14 @@ Error generating stack: ` + u.message + `
         destroy: function(Ne) {
           d = !0, D = Ne;
         }
-      }, G = !1;
+      }, V = !1;
       function te() {
-        G = !0;
+        V = !0;
       }
       var ae = gi(e, xa(i, r ? r.identifierPrefix : void 0), Yo(), 1 / 0, a, void 0, te, void 0, void 0);
       if (gu(ae), n(ae, u), t(ae, O), d)
         throw D;
-      if (!G)
+      if (!V)
         throw new Error("A component suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. To fix, updates that suspend should be wrapped with startTransition.");
       return w;
     }
@@ -8017,7 +8016,7 @@ function Ss() {
       t();
     }
     var B = 512, j = null, E = 0;
-    function V(t) {
+    function G(t) {
       j = new Uint8Array(B), E = 0;
     }
     function P(t, n) {
@@ -10516,9 +10515,9 @@ Please update the following components: %s`,
     function lo(t, n, a) {
       var c = t.id, y = t.overflow, L = co(c) - 1, T = c & ~(1 << L), Q = a + 1, e = co(n) + L;
       if (e > 30) {
-        var r = L - L % 5, i = (1 << r) - 1, u = (T & i).toString(32), d = T >> r, D = L - r, w = co(n) + D, O = Q << D, G = O | d, te = u + y;
+        var r = L - L % 5, i = (1 << r) - 1, u = (T & i).toString(32), d = T >> r, D = L - r, w = co(n) + D, O = Q << D, V = O | d, te = u + y;
         return {
-          id: 1 << w | G,
+          id: 1 << w | V,
           overflow: te
         };
       } else {
@@ -11179,8 +11178,8 @@ Error generating stack: ` + c.message + `
         throw new Error("Objects are not valid as a React child (found: " + (O === "[object Object]" ? "object with keys {" + Object.keys(a).join(", ") + "}" : O) + "). If you meant to render a collection of children, use an array instead.");
       }
       if (typeof a == "string") {
-        var G = n.blockedSegment;
-        G.lastPushedText = Kr(n.blockedSegment.chunks, a, t.responseState, G.lastPushedText);
+        var V = n.blockedSegment;
+        V.lastPushedText = Kr(n.blockedSegment.chunks, a, t.responseState, V.lastPushedText);
         return;
       }
       if (typeof a == "number") {
@@ -11424,7 +11423,7 @@ Error generating stack: ` + c.message + `
         return TA(t, n, c), Ia(n, t.responseState, y);
     }
     function So(t, n) {
-      V();
+      G();
       try {
         var a = t.completedRootSegment;
         a !== null && t.pendingRootTasks === 0 && (To(t, n, a), t.completedRootSegment = null, Oo(n, t.responseState));
@@ -11439,7 +11438,7 @@ Error generating stack: ` + c.message + `
           var Q = T[y];
           SA(t, n, Q);
         }
-        T.splice(0, y), fe(n), V(n);
+        T.splice(0, y), fe(n), G(n);
         var e = t.partialBoundaries;
         for (y = 0; y < e.length; y++) {
           var r = e[y];
@@ -11624,7 +11623,7 @@ const Qu = async (I) => {
       return W.textContent;
     {
       const E = W.tagName.toLowerCase();
-      let V = Array.from(W.attributes).reduce((fe, $) => {
+      let G = Array.from(W.attributes).reduce((fe, $) => {
         const re = $.name.toLowerCase();
         if (re === "style") {
           const H = $.value.split(";").filter((ee) => ee.trim() !== ""), b = {};
@@ -11637,9 +11636,9 @@ const Qu = async (I) => {
         return fe;
       }, {});
       const P = W.classList;
-      (j = h.botBubble) != null && j.showAvatar && (V = ks(P, V)), V = bs(P, V, h), V = Os(P, V, h), V = Qs(P, V, h);
+      (j = h.botBubble) != null && j.showAvatar && (G = ks(P, G)), G = bs(P, G, h), G = Os(P, G, h), G = Qs(P, G, h);
       const _ = Gu(W.innerHTML, h);
-      return Ku(E, { key: B, ...V }, _);
+      return Ku(E, { key: B, ...G }, _);
     }
   });
 }, ks = (I, h) => ((I.contains("rcb-options-container") || I.contains("rcb-checkbox-container")) && (Object.prototype.hasOwnProperty.call(h, "class") ? h.class = `${I.toString()} rcb-options-offset` : h.class = "rcb-options-offset"), h), bs = (I, h, S) => {
@@ -11705,7 +11704,7 @@ const Us = ({
     return /* @__PURE__ */ F.jsx("div", { children: /* @__PURE__ */ F.jsx("div", { className: `rcb-chat-drawer-container ${I == !1 ? "open" : ""}`, children: /* @__PURE__ */ F.jsx("div", { children: f.renderDrawerItems ? f.renderDrawerItems : null }) }) });
 }, Rs = ({ flow: I }) => {
   var _e, Xt, ur, Jt, sr, Kt, wr, lr, Rt;
-  const { botOptions: h, setBotOptions: S } = Gt(), { messages: x, setMessages: f } = Yu(), { paths: R, setPaths: W } = Na(), B = Zr(null), j = Zr(null), E = Zr(""), V = Zr(!1), P = Zr(!1), _ = Zr(null), fe = Zr(), $ = Zr(null), [re, H] = We(!1), [b, ee] = We(!0), [ge, de] = We(!1), [Ae, ve] = We(!1), [le, be] = We(!1), [Ie, xe] = We(!1), [Oe, ke] = We(!1), [Ve, Le] = We(!1), [Ue, Je] = We(0), [At, ot] = We(!1), [gt, zt] = We(), [De, we] = We(0), [Lt, ht] = We(((_e = window.visualViewport) == null ? void 0 : _e.height) || window.innerHeight), [Ke, Qe] = We(((Xt = window.visualViewport) == null ? void 0 : Xt.width) || window.innerWidth), kt = Zr(0);
+  const { botOptions: h, setBotOptions: S } = Gt(), { messages: x, setMessages: f } = Yu(), { paths: R, setPaths: W } = Na(), B = Zr(null), j = Zr(null), E = Zr(""), G = Zr(!1), P = Zr(!1), _ = Zr(null), fe = Zr(), $ = Zr(null), [re, H] = We(!1), [b, ee] = We(!0), [ge, de] = We(!1), [Ae, ve] = We(!1), [le, be] = We(!1), [Ie, xe] = We(!1), [Oe, ke] = We(!1), [Ve, Le] = We(!1), [Ue, Je] = We(0), [At, ot] = We(!1), [gt, zt] = We(), [De, we] = We(0), [Lt, ht] = We(((_e = window.visualViewport) == null ? void 0 : _e.height) || window.innerHeight), [Ke, Qe] = We(((Xt = window.visualViewport) == null ? void 0 : Xt.width) || window.innerWidth), kt = Zr(0);
   Vt(() => {
     var q, ue, oe, Me, pe, ne, Se;
     if (window.addEventListener("click", et), window.addEventListener("keydown", et), window.addEventListener("touchstart", et), Dt(), be((q = h.chatInput) == null ? void 0 : q.disabled), de((ue = h.audio) == null ? void 0 : ue.defaultToggledOn), ve((oe = h.voice) == null ? void 0 : oe.defaultToggledOn), (Me = h.chatHistory) != null && Me.disabled)
@@ -11742,8 +11741,8 @@ const Us = ({
   }, []), Vt(() => {
     Qu(x), st();
   }, [x.length]), Vt(() => {
-    V.current || Qu(x);
-  }, [V.current]), Vt(() => {
+    G.current || Qu(x);
+  }, [G.current]), Vt(() => {
     var pe, ne, Se, He;
     if (h.isOpen && (we(0), ht((pe = window.visualViewport) == null ? void 0 : pe.height), Qe((ne = window.visualViewport) == null ? void 0 : ne.width)), Qr)
       return;
@@ -11784,7 +11783,7 @@ const Us = ({
       W,
       zt,
       qe
-    ), ot(!1), Zt(), yu(P.current && !ue.chatDisabled, h), V.current = !1;
+    ), ot(!1), Zt(), yu(P.current && !ue.chatDisabled, h), G.current = !1;
   }, Dt = async () => {
     var Me, pe, ne;
     ee((Me = h.notification) == null ? void 0 : Me.defaultToggledOn);
@@ -11834,7 +11833,7 @@ const Us = ({
     } else
       f((rt) => [...rt, oe]);
   }, or = async (q, ue, oe) => {
-    ot(!1), f((He) => [...He, q]), V.current = !0;
+    ot(!1), f((He) => [...He, q]), G.current = !0;
     let Me = q.content;
     oe && (Me = is(Me));
     let pe = 0;
@@ -11855,11 +11854,11 @@ const Us = ({
           return wt;
         });
       }, ue);
-    }), V.current = !1;
+    }), G.current = !1;
   }, jt = async (q, ue = "bot") => {
     const oe = { content: q, sender: ue };
-    if (!V.current) {
-      ot(!1), f((Me) => [...Me, oe]), V.current = !0;
+    if (!G.current) {
+      ot(!1), f((Me) => [...Me, oe]), G.current = !0;
       return;
     }
     f((Me) => {
@@ -12238,10 +12237,10 @@ const il = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMj
   options: h
 }) => {
   var $;
-  const [S, x] = We(ul(h)), [f, R] = We([]), [W, B] = We(["start"]), j = I ?? os, E = (re) => /* @__PURE__ */ F.jsx(Uu.Provider, { value: { botOptions: S, setBotOptions: x }, children: re }), V = (re) => /* @__PURE__ */ F.jsx(Hu.Provider, { value: { paths: W, setPaths: B }, children: re }), P = (re) => /* @__PURE__ */ F.jsx(Ru.Provider, { value: { messages: f, setMessages: R }, children: re }), _ = () => {
+  const [S, x] = We(ul(h)), [f, R] = We([]), [W, B] = We(["start"]), j = I ?? os, E = (re) => /* @__PURE__ */ F.jsx(Uu.Provider, { value: { botOptions: S, setBotOptions: x }, children: re }), G = (re) => /* @__PURE__ */ F.jsx(Hu.Provider, { value: { paths: W, setPaths: B }, children: re }), P = (re) => /* @__PURE__ */ F.jsx(Ru.Provider, { value: { messages: f, setMessages: R }, children: re }), _ = () => {
     var H, b, ee;
     let re = /* @__PURE__ */ F.jsx(Rs, { flow: j });
-    return (H = S.advance) != null && H.useCustomMessages || (re = P(re)), (b = S.advance) != null && b.useCustomPaths || (re = V(re)), (ee = S.advance) != null && ee.useCustomBotOptions || (re = E(re)), re;
+    return (H = S.advance) != null && H.useCustomMessages || (re = P(re)), (b = S.advance) != null && b.useCustomPaths || (re = G(re)), (ee = S.advance) != null && ee.useCustomBotOptions || (re = E(re)), re;
   }, fe = () => {
     var re, H;
     return Qr && ((re = S.theme) == null ? void 0 : re.desktopEnabled) || !Qr && ((H = S.theme) == null ? void 0 : H.mobileEnabled);
