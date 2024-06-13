@@ -16,12 +16,16 @@ const ChatBotHeader = ({
 	notificationToggledOn,
 	audioToggledOn,
 	handleToggleNotification,
-	handleToggleAudio
+	handleToggleAudio,
+	handleToggleDrawer,
+	drawerToggledOn
 }: {
 	notificationToggledOn: boolean;
 	audioToggledOn: boolean;
+	drawerToggledOn: boolean;
 	handleToggleNotification: () => void;
 	handleToggleAudio: () => void;
+	handleToggleDrawer: () => void;
 }) => {
 
 	// handles options for bot
@@ -59,6 +63,14 @@ const ChatBotHeader = ({
 
 	return (
 		<div style={headerStyle} className="rcb-chat-header-container">
+			<div onMouseDown={(event: MouseEvent) => {
+				event.preventDefault();
+				console.log('Pressed');	
+				handleToggleDrawer()
+			}}
+			>
+				{drawerToggledOn ? 'open' : 'opened'} 
+			</div>
 			<div className="rcb-chat-header">
 				{botOptions.header?.showAvatar &&
 					<div style={headerImages.headerAvatar} className="rcb-bot-avatar"/>

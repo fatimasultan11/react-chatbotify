@@ -68,6 +68,9 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 	// tracks if audio is toggled on
 	const [audioToggledOn, setAudioToggledOn] = useState<boolean>(false);
 
+	// tracks if drawer is on
+	const [drawerToggledOn ,  setDrawerToggledOn] = useState<boolean>(true)
+
 	// tracks if voice is toggled on
 	const [voiceToggledOn, setVoiceToggledOn] = useState<boolean>(false);
 
@@ -568,6 +571,11 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 		setAudioToggledOn(prev => !prev);
 	}
 
+	const handleToggleDrawer = () => {
+		setDrawerToggledOn(prev => !prev);
+		openDrawer(drawerToggledOn)
+		
+	}
 	/**
 	 * Handles toggling of voice.
 	 * 
@@ -748,6 +756,7 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 					<ChatBotHeader notificationToggledOn={notificationToggledOn} 
 						handleToggleNotification={handleToggleNotification}
 						audioToggledOn={audioToggledOn} handleToggleAudio={handleToggleAudio}
+						handleToggleDrawer={handleToggleDrawer} drawerToggledOn={drawerToggledOn}
 					/>
 				}
 				<ChatBotBody chatBodyRef={chatBodyRef} isBotTyping={isBotTyping}

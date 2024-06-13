@@ -7,10 +7,12 @@ import "./ChatBotHeader.css";
  * @param handleToggleNotification handles toggling of notification
  * @param handleToggleAudio handles toggling of audio
  */
-declare const ChatBotHeader: ({ notificationToggledOn, audioToggledOn, handleToggleNotification, handleToggleAudio }: {
+declare const ChatBotHeader: ({ notificationToggledOn, audioToggledOn, handleToggleNotification, handleToggleAudio, handleToggleDrawer, drawerToggledOn }: {
     notificationToggledOn: boolean;
     audioToggledOn: boolean;
+    drawerToggledOn: boolean;
     handleToggleNotification: () => void;
     handleToggleAudio: () => void;
+    handleToggleDrawer: () => void;
 }) => import("react/jsx-runtime").JSX.Element;
 export default ChatBotHeader;
