@@ -65,9 +65,8 @@ const ChatBotHeader = ({
 		<div style={headerStyle} className="rcb-chat-header-container">
 			<div onMouseDown={(event: MouseEvent) => {
 				event.preventDefault();
-				console.log('Pressed');	
 				handleToggleDrawer()
-			}}
+			}}className="rcb-chat-header"
 			>
 				{drawerToggledOn ? 'open' : 'opened'} 
 			</div>
