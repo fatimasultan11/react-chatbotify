@@ -4,9 +4,16 @@
 	height: 100%;
 	width: 100%;
 	padding-bottom: 16px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	background: var(--Main-Gredient---Popup, linear-gradient(96deg, rgba(255, 255, 255, 0.70) 0.34%, rgba(255, 255, 255, 0.50) 98.94%));
+	transition: all 0.3s ease;
 	overflow-x: hidden;
 	overflow-y: scroll;
-	touch-action: pan-y; /* prevents pinch zoom on mobile */
+	touch-action: pan-y;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin-top: -10px;
+	/* prevents pinch zoom on mobile */
 }
 
 .rcb-chat-body-container::-webkit-scrollbar-track {
@@ -50,7 +57,7 @@
 	flex-direction: row;
 	width: fit-content;
 	font-size: 15px;
- 	overflow-wrap: anywhere;
+	overflow-wrap: anywhere;
 	overflow: hidden;
 	white-space: pre-wrap;
 }
@@ -69,6 +76,7 @@
 		transform: translate(-100%, 50%) scale(0);
 		opacity: 0;
 	}
+
 	100% {
 		transform: translate(0, 0) scale(1);
 		opacity: 1;
@@ -89,6 +97,7 @@
 		transform: translate(100%, 50%) scale(0);
 		opacity: 0;
 	}
+
 	100% {
 		transform: translate(0, 0) scale(1);
 		opacity: 1;
@@ -131,20 +140,22 @@
 }
 
 .rcb-dot:nth-child(2) {
-  	animation-delay: 0.2s;
+	animation-delay: 0.2s;
 }
 
 .rcb-dot:nth-child(3) {
-  	animation-delay: 0.4s;
+	animation-delay: 0.4s;
 }
 
 @keyframes rcb-typing {
 	0% {
 		opacity: 0.4;
 	}
+
 	50% {
 		opacity: 1
 	}
+
 	100% {
 		opacity: 0.4;
 	}
