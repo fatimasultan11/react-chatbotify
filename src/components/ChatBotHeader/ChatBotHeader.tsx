@@ -51,6 +51,12 @@ const ChatBotHeader = ({
 		},
 		closeChatIcon: {
 			backgroundImage: `url(${botOptions.header?.closeChatIcon})`,
+		},
+		drawerCloseIcon: {
+			backgroundImage: `url(${botOptions.header?.drawerCloseIcon})`,
+		},
+		drawerOpenIcon: {
+			backgroundImage: `url(${botOptions.header?.drawerOpenIcon})`,
 		}
 	};
 
@@ -63,16 +69,40 @@ const ChatBotHeader = ({
 
 	return (
 		<div style={headerStyle} className="rcb-chat-header-container">
-			<div onMouseDown={(event: MouseEvent) => {
-				event.preventDefault();
-				handleToggleDrawer()
-			}}className="rcb-chat-header"
-			>
-				{drawerToggledOn ? 'open' : 'opened'} 
-			</div>
+			{
+				botOptions.header?.showDrawerButton && 
+				<div className="rcb-chat-header">
+					{drawerToggledOn ? 
+						<div
+							style={headerImages.drawerCloseIcon}
+							onMouseDown={(event: MouseEvent) => {
+								event.stopPropagation();
+								handleToggleDrawer();
+							}}
+							className="rcb-close-chat-icon"
+						>
+						</div>
+						:
+						<div
+							style={headerImages.drawerOpenIcon}
+							onMouseDown={(event: MouseEvent) => {
+								event.stopPropagation();
+								handleToggleDrawer();
+							}}
+							className="rcb-close-chat-icon"
+						>
+						</div>
+					}
+				</div>
+			}
+			
 			<div className="rcb-chat-header">
 				{botOptions.header?.showAvatar &&
-					<div style={headerImages.headerAvatar} className="rcb-bot-avatar"/>
+					<div style={headerImages.headerAvatar}
+						className={
+							botOptions.header?.showDrawerButton ?
+								"rcb-bot-avatar-with-drawer-button" :
+								"rcb-bot-avatar"} />
 				}
 				{botOptions.header?.title}
 			</div>

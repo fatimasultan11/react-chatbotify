@@ -29,6 +29,8 @@ export declare const getDefaultBotOptions: () => {
         showAvatar: boolean;
         avatar: any;
         closeChatIcon: any;
+        drawerOpenIcon: any;
+        drawerCloseIcon: any;
     };
     notification: {
         disabled: boolean;
@@ -187,6 +189,8 @@ export declare const parseBotOptions: (providedOptions: Options | undefined) => 
         showAvatar: boolean;
         avatar: any;
         closeChatIcon: any;
+        drawerOpenIcon: any;
+        drawerCloseIcon: any;
     };
     notification: {
         disabled: boolean;

@@ -31,6 +31,10 @@ export type Options = {
 		showAvatar?: boolean;
 		avatar?: string;
 		closeChatIcon?: string;
+		showDrawerButton?: boolean;
+		drawerOpenIcon?: string;
+		drawerCloseIcon?: string;
+
 	},
 	notification?: {
 		disabled?: boolean;

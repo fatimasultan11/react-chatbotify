@@ -13,6 +13,8 @@ import voiceIcon from "../assets/voice_icon.svg";
 import emojiIcon from "../assets/emoji_icon.svg";
 import audioIcon from "../assets/audio_icon.svg";
 import notificationSound from "../assets/notification_sound.wav";
+import DrawerOpenIcon from "../assets/drawer_open_icon.svg";
+import DrawerCloseIcon from "../assets/drawer_close_icon.svg"
 
 // default options provided to the bot
 const defaultOptions = {
@@ -51,6 +53,8 @@ const defaultOptions = {
 		showAvatar: true,
 		avatar: botAvatar,
 		closeChatIcon: closeChatIcon,
+		drawerOpenIcon: DrawerOpenIcon,
+		drawerCloseIcon: DrawerCloseIcon
 	},
 	notification: {
 		disabled: false,
