@@ -26,8 +26,8 @@ const ChatBotButton = ({
 	// styles for chat button
 	const chatButtonStyle: React.CSSProperties = {
 		backgroundImage: `url(${botOptions.chatButton?.icon})`,
-		height: 175,
-		paddingRight:270,
+		height: 75,
+		width:75,
 		...botOptions.chatButtonStyle
 	};
 	

@@ -1413,8 +1413,8 @@ const cs = ({
     S({ ...h, isOpen: !h.isOpen });
   }, f = {
     backgroundImage: `url(${(Y = h.chatButton) == null ? void 0 : Y.icon})`,
-    height: 175,
-    paddingRight: 270,
+    height: 75,
+    width: 75,
     ...h.chatButtonStyle
   };
   return /* @__PURE__ */ H.jsx(H.Fragment, { children: !((R = h.theme) != null && R.embedded) && /* @__PURE__ */ H.jsx(
