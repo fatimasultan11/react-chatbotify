@@ -1,5 +1,5 @@
-import { Flow } from "../types/Flow";
-import "./ChatBotContainer.css";
+import { Flow } from '../types/Flow';
+
 /**
  * Integrates and contains the various components that makeup the chatbot.
  *

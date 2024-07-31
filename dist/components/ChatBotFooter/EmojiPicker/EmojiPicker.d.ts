@@ -1,5 +1,5 @@
-import { RefObject } from "react";
-import "./EmojiPicker.css";
+import { RefObject } from 'react';
+
 /**
  * Supports selecting of emojis.
  *

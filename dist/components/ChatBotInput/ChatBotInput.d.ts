@@ -1,6 +1,6 @@
-import { RefObject } from "react";
-import "./ChatBotInput.css";
-import { Flow } from "../../types/Flow";
+import { RefObject } from 'react';
+import { Flow } from '../../types/Flow';
+
 /**
  * Contains chat input field for user to enter messages.
  *

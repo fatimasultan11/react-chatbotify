@@ -1,5 +1,5 @@
-/// <reference types="react" />
-import { Flow } from "./Flow";
+import { Flow } from './Flow';
+
 /**
  * Defines the accessible data for use in dynamic attributes.
  */

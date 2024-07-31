@@ -1,6 +1,6 @@
-/// <reference types="react" />
-import { Block } from "../../types/Block";
-import { Flow } from "../../types/Flow";
+import { Block } from '../../types/Block';
+import { Flow } from '../../types/Flow';
+
 /**
  * Handles processing of checkboxes in current block.
  *

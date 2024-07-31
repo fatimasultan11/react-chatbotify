@@ -1,5 +1,6 @@
-import { RefObject, Dispatch, SetStateAction } from "react";
-import { Options } from "../types/Options";
+import { RefObject, Dispatch, SetStateAction } from 'react';
+import { Options } from '../types/Options';
+
 /**
  * Starts voice recording for input into textarea.
  *

@@ -1,5 +1,5 @@
-import { RefObject, Dispatch, SetStateAction } from "react";
-import "./ChatMessagePrompt.css";
+import { RefObject, Dispatch, SetStateAction } from 'react';
+
 /**
  * Provides scroll to bottom option for users when there are unread messages.
  *

@@ -1,6 +1,6 @@
-import { RefObject } from "react";
-import { Flow } from "../../../types/Flow";
-import "./FileAttachmentButton.css";
+import { RefObject } from 'react';
+import { Flow } from '../../../types/Flow';
+
 /**
  * Supports uploading of files from user.
  *

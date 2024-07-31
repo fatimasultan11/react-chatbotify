@@ -1,4 +1,4 @@
-import "./ChatBotButton.css";
+
 /**
  * Toggles opening and closing of the chat window when theme.embedded is false.
  *
