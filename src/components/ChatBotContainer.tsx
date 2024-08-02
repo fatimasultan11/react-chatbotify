@@ -23,8 +23,6 @@ import { Params } from "../types/Params";
 import "./ChatBotContainer.css";
 import ChatBotDrawer from "./ChatBotDrawer/ChatBotDrawer";
 
-import Draggable from 'react-draggable';
-
 /**
  * Integrates and contains the various components that makeup the chatbot.
  * 
@@ -746,47 +744,42 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 							backgroundColor: "#fff",
 							zIndex: 9999
 						}}
-					>
+					>	
 					</div>
 				</>
 			}
-			{/* draggable */}
-			<Draggable>
-				<div className="box rem-position-fix" style={{position: 'absolute', right: '20px',bottom: '20px'}}>
-					<div
-						style={getChatWindowStyle()}
-						className="rcb-chat-window"
-					>
-						{botOptions.theme?.showHeader &&
-							<ChatBotHeader notificationToggledOn={notificationToggledOn}
-								handleToggleNotification={handleToggleNotification}
-								audioToggledOn={audioToggledOn} handleToggleAudio={handleToggleAudio}
-								handleToggleDrawer={handleToggleDrawer} drawerToggledOn={drawerToggledOn}
-							/>
-						}
-						<ChatBotBody chatBodyRef={chatBodyRef} isBotTyping={isBotTyping}
-							isLoadingChatHistory={isLoadingChatHistory} chatScrollHeight={chatScrollHeight}
-							setChatScrollHeight={setChatScrollHeight} setIsLoadingChatHistory={setIsLoadingChatHistory}
-							isScrolling={isScrolling} setIsScrolling={setIsScrolling}
-							unreadCount={unreadCount} setUnreadCount={setUnreadCount}
-						/>
-						{botOptions.theme?.showInputRow &&
-							<ChatBotInput handleToggleVoice={handleToggleVoice} handleActionInput={handleActionInput}
-								inputRef={inputRef} textAreaDisabled={textAreaDisabled}
-								textAreaSensitiveMode={textAreaSensitiveMode}
-								voiceToggledOn={voiceToggledOn} getCurrPath={getCurrPath}
-							/>
-						}
-						{botOptions.theme?.showFooter &&
-							<ChatBotFooter inputRef={inputRef} flow={flow} textAreaDisabled={textAreaDisabled}
-								handleActionInput={handleActionInput} injectMessage={injectMessage}
-								streamMessage={streamMessage} getCurrPath={getCurrPath} getPrevPath={getPrevPath}
-								openChat={openChat} openDrawer={openDrawer}
-							/>
-						}
-					</div>
-				</div>
-			</Draggable>
+			<div
+				style={getChatWindowStyle()}
+				className="rcb-chat-window"
+			>
+				{botOptions.theme?.showHeader &&
+					<ChatBotHeader notificationToggledOn={notificationToggledOn} 
+						handleToggleNotification={handleToggleNotification}
+						audioToggledOn={audioToggledOn} handleToggleAudio={handleToggleAudio}
+						handleToggleDrawer={handleToggleDrawer} drawerToggledOn={drawerToggledOn}
+					/>
+				}
+				<ChatBotBody chatBodyRef={chatBodyRef} isBotTyping={isBotTyping}
+					isLoadingChatHistory={isLoadingChatHistory} chatScrollHeight={chatScrollHeight}
+					setChatScrollHeight={setChatScrollHeight} setIsLoadingChatHistory={setIsLoadingChatHistory}
+					isScrolling={isScrolling} setIsScrolling={setIsScrolling}
+					unreadCount={unreadCount} setUnreadCount={setUnreadCount}
+				/>
+				{botOptions.theme?.showInputRow &&
+					<ChatBotInput handleToggleVoice={handleToggleVoice} handleActionInput={handleActionInput} 
+						inputRef={inputRef} textAreaDisabled={textAreaDisabled}
+						textAreaSensitiveMode={textAreaSensitiveMode}
+						voiceToggledOn={voiceToggledOn} getCurrPath={getCurrPath}
+					/>
+				}
+				{botOptions.theme?.showFooter &&
+					<ChatBotFooter inputRef={inputRef} flow={flow} textAreaDisabled={textAreaDisabled} 
+						handleActionInput={handleActionInput} injectMessage={injectMessage}
+						streamMessage={streamMessage} getCurrPath={getCurrPath} getPrevPath={getPrevPath}
+						openChat={openChat} openDrawer={openDrawer}
+					/>
+				}
+			</div>
 		</div>
 	);
 };

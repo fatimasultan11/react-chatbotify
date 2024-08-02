@@ -6,9 +6,7 @@
 }
 
 /* Chat Window */
-.cursor{
-	cursor: grab;
-}
+
 .rcb-chat-window {
 	position: fixed;
 	right: 20px;
