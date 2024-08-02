@@ -35,13 +35,13 @@
 .rcb-window-open .rcb-chat-window {
 	opacity: 1;
 	visibility: visible;
-	animation: expand 0.3s ease-in-out forwards;
+	/* animation: expand 0.3s ease-in-out forwards; */
 }
 
 .rcb-window-close .rcb-chat-window {
 	opacity: 0;
 	visibility: hidden;
-	animation: collapse 0.3s ease-in-out forwards;
+	/* animation: collapse 0.3s ease-in-out forwards; */
 }
 
 @keyframes expand {
