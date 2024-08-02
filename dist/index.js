@@ -13727,68 +13727,79 @@ const Hc = /* @__PURE__ */ Al(Fc), Wc = ({ flow: s }) => {
             }
           )
         ] }),
-        /* @__PURE__ */ Z.jsx(Hc, { children: /* @__PURE__ */ Z.jsx("div", { className: "box rem-position-fix", style: { position: "absolute", right: "20px", bottom: "20px" }, children: /* @__PURE__ */ Z.jsxs(
-          "div",
+        /* @__PURE__ */ Z.jsx(
+          Hc,
           {
-            style: Tr(),
-            className: "rcb-chat-window",
-            children: [
-              ((yr = a.theme) == null ? void 0 : yr.showHeader) && /* @__PURE__ */ Z.jsx(
-                sl,
-                {
-                  notificationToggledOn: O,
-                  handleToggleNotification: jt,
-                  audioToggledOn: X,
-                  handleToggleAudio: yt,
-                  handleToggleDrawer: dr,
-                  drawerToggledOn: Q
-                }
-              ),
-              /* @__PURE__ */ Z.jsx(
-                cl,
-                {
-                  chatBodyRef: x,
-                  isBotTyping: At,
-                  isLoadingChatHistory: _e,
-                  chatScrollHeight: $e,
-                  setChatScrollHeight: lt,
-                  setIsLoadingChatHistory: Ne,
-                  isScrolling: Ze,
-                  setIsScrolling: Ge,
-                  unreadCount: Ie,
-                  setUnreadCount: pe
-                }
-              ),
-              ((mr = a.theme) == null ? void 0 : mr.showInputRow) && /* @__PURE__ */ Z.jsx(
-                hl,
-                {
-                  handleToggleVoice: gr,
-                  handleActionInput: Pt,
-                  inputRef: L,
-                  textAreaDisabled: De,
-                  textAreaSensitiveMode: je,
-                  voiceToggledOn: ne,
-                  getCurrPath: wt
-                }
-              ),
-              ((It = a.theme) == null ? void 0 : It.showFooter) && /* @__PURE__ */ Z.jsx(
-                Dl,
-                {
-                  inputRef: L,
-                  flow: s,
-                  textAreaDisabled: De,
-                  handleActionInput: Pt,
-                  injectMessage: St,
-                  streamMessage: Wt,
-                  getCurrPath: wt,
-                  getPrevPath: tr,
-                  openChat: Ke,
-                  openDrawer: ut
-                }
-              )
-            ]
+            bounds: {
+              top: window.innerWidth - window.innerWidth - 105,
+              left: window.innerWidth - window.innerWidth - 775,
+              right: window.innerWidth - window.innerWidth,
+              bottom: 0
+            },
+            children: /* @__PURE__ */ Z.jsx("div", { className: "box rem-position-fix", style: { position: "absolute", right: "20px", bottom: "20px" }, children: /* @__PURE__ */ Z.jsxs(
+              "div",
+              {
+                style: Tr(),
+                className: "rcb-chat-window",
+                children: [
+                  ((yr = a.theme) == null ? void 0 : yr.showHeader) && /* @__PURE__ */ Z.jsx(
+                    sl,
+                    {
+                      notificationToggledOn: O,
+                      handleToggleNotification: jt,
+                      audioToggledOn: X,
+                      handleToggleAudio: yt,
+                      handleToggleDrawer: dr,
+                      drawerToggledOn: Q
+                    }
+                  ),
+                  /* @__PURE__ */ Z.jsx(
+                    cl,
+                    {
+                      chatBodyRef: x,
+                      isBotTyping: At,
+                      isLoadingChatHistory: _e,
+                      chatScrollHeight: $e,
+                      setChatScrollHeight: lt,
+                      setIsLoadingChatHistory: Ne,
+                      isScrolling: Ze,
+                      setIsScrolling: Ge,
+                      unreadCount: Ie,
+                      setUnreadCount: pe
+                    }
+                  ),
+                  ((mr = a.theme) == null ? void 0 : mr.showInputRow) && /* @__PURE__ */ Z.jsx(
+                    hl,
+                    {
+                      handleToggleVoice: gr,
+                      handleActionInput: Pt,
+                      inputRef: L,
+                      textAreaDisabled: De,
+                      textAreaSensitiveMode: je,
+                      voiceToggledOn: ne,
+                      getCurrPath: wt
+                    }
+                  ),
+                  ((It = a.theme) == null ? void 0 : It.showFooter) && /* @__PURE__ */ Z.jsx(
+                    Dl,
+                    {
+                      inputRef: L,
+                      flow: s,
+                      textAreaDisabled: De,
+                      handleActionInput: Pt,
+                      injectMessage: St,
+                      streamMessage: Wt,
+                      getCurrPath: wt,
+                      getPrevPath: tr,
+                      openChat: Ke,
+                      openDrawer: ut
+                    }
+                  )
+                ]
+              }
+            ) })
           }
-        ) }) })
+        )
       ]
     }
   );

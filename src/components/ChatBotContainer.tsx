@@ -751,7 +751,13 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 				</>
 			}
 			{/* draggable */}
-			<Draggable>
+			<Draggable
+				bounds={{
+					top: window.innerWidth - window.innerWidth - 105,
+					left: window.innerWidth - window.innerWidth - 775,
+					right: window.innerWidth - window.innerWidth, bottom: 0
+				}}
+			>
 				<div className="box rem-position-fix" style={{position: 'absolute', right: '20px',bottom: '20px'}}>
 					<div
 						style={getChatWindowStyle()}

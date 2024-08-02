@@ -4,7 +4,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+.rcb-chat-bot{
+	overflow: hidden;
+}
 /* Chat Window */
 .cursor{
 	cursor: grab;
