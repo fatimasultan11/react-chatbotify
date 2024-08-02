@@ -1,5 +1,4 @@
-import { Block } from './Block';
-
+import { Block } from "./Block";
 /**
  * Defines a conversation Flow (made up of conversation blocks).
  */

@@ -1,4 +1,4 @@
-
+import "./LoadingSpinner.css";
 /**
  * Shows a spinning indicator when loading chat history.
  */

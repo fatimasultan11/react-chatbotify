@@ -1,5 +1,5 @@
-import { RefObject, Dispatch, SetStateAction } from 'react';
-
+import { RefObject, Dispatch, SetStateAction } from "react";
+import "./ChatBotBody.css";
 /**
  * Contains chat messages between the user and bot.
  *

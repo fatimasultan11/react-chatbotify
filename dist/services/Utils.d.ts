@@ -1,5 +1,4 @@
-import { Flow } from '../types/Flow';
-
+import { Flow } from "../types/Flow";
 export declare const defaultFlow: Flow;
 export declare const isDesktop: boolean;
 /**

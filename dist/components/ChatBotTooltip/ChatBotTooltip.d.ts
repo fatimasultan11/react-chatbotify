@@ -1,4 +1,4 @@
-
+import "./ChatBotTooltip.css";
 /**
  * Shows tooltip beside the chat bot button to user.
  */

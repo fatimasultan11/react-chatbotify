@@ -1,6 +1,6 @@
-import { RefObject } from 'react';
-import { Flow } from '../../types/Flow';
-
+import { RefObject } from "react";
+import { Flow } from "../../types/Flow";
+import "./ChatBotFooter.css";
 /**
  * Contains attachment button, emoji button and footer text.
  *

@@ -1,5 +1,5 @@
-import { Flow } from '../../types/Flow';
-
+import "./UserOptions.css";
+import { Flow } from "../../types/Flow";
 /**
  * Supports showing of options for user to select.
  *

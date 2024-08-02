@@ -1,5 +1,4 @@
-import { Options } from '../types/Options';
-
+import { Options } from "../types/Options";
 /**
  * Retrieves default values for bot options.
  */

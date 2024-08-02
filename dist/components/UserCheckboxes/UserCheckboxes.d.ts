@@ -1,5 +1,5 @@
-import { Flow } from '../../types/Flow';
-
+import "./UserCheckboxes.css";
+import { Flow } from "../../types/Flow";
 /**
  * Supports showing of checkboxes for user to mark.
  *

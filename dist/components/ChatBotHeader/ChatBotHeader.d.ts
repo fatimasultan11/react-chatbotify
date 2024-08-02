@@ -1,4 +1,4 @@
-
+import "./ChatBotHeader.css";
 /**
  * Contains bot avatar, name, notifications, audio and close chat icon.
  *

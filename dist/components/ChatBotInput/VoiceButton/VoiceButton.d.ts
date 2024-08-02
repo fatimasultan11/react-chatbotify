@@ -1,5 +1,5 @@
-import { RefObject, Dispatch, SetStateAction } from 'react';
-
+import { RefObject, Dispatch, SetStateAction } from "react";
+import "./VoiceButton.css";
 /**
  * Toggles voice to text input to the chat bot.
  *

@@ -1,6 +1,5 @@
-import { Block } from '../../types/Block';
-import { Params } from '../../types/Params';
-
+import { Block } from "../../types/Block";
+import { Params } from "../../types/Params";
 /**
  * Handles processing of render in current block.
  *

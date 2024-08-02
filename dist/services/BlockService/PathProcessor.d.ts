@@ -1,7 +1,6 @@
-import { Dispatch, SetStateAction } from 'react';
-import { Block } from '../../types/Block';
-import { Params } from '../../types/Params';
-
+import { Dispatch, SetStateAction } from "react";
+import { Block } from "../../types/Block";
+import { Params } from "../../types/Params";
 /**
  * Handles processing of path in current block.
  *

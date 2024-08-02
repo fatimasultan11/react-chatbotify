@@ -1,5 +1,5 @@
-import { Params } from './Params';
-
+/// <reference types="react" />
+import { Params } from "./Params";
 /**
  * Defines the attributes allowed within a conversation block.
  */
