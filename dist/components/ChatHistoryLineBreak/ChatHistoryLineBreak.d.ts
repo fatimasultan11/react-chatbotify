@@ -1,4 +1,4 @@
-import "./ChatHistoryLineBreak.css";
+
 /**
  * Indicates the start of old messages when viewing history.
  */

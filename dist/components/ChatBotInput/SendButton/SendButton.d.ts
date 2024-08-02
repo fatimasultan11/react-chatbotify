@@ -1,5 +1,5 @@
-import { MouseEvent } from "react";
-import "./SendButton.css";
+import { MouseEvent } from 'react';
+
 /**
  * Sends current user input to the chat bot.
  *

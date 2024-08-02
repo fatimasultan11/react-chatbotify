@@ -1,5 +1,6 @@
-import { Message } from "../types/Message";
-import { Options } from "../types/Options";
+import { Message } from '../types/Message';
+import { Options } from '../types/Options';
+
 /**
  * Handles logic for whether a bot message should be read out.
  *

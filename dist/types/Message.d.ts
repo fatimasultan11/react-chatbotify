@@ -1,4 +1,3 @@
-/// <reference types="react" />
 /**
  * Defines the attributes within a sent bot/user message.
  */

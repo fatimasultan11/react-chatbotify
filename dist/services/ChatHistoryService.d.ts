@@ -1,6 +1,7 @@
-import { Dispatch, SetStateAction } from "react";
-import { Message } from "../types/Message";
-import { Options } from "../types/Options";
+import { Dispatch, SetStateAction } from 'react';
+import { Message } from '../types/Message';
+import { Options } from '../types/Options';
+
 /**
  * Updates the messages array with a new message appended at the end and saves chat history if enabled.
  *

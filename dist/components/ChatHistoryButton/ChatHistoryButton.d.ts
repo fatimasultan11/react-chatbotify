@@ -1,4 +1,4 @@
-import "./ChatHistoryButton.css";
+
 /**
  * Supports viewing of old messages.
  *
